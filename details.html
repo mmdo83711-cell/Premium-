@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>অ্যাপ বিস্তারিত</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Firebase SDK -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
+</head>
+<body>
+    <!-- হেডার -->
+    <header class="header">
+        <div class="container">
+            <button class="back-btn" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="logo"><i class="fas fa-crown"></i> অ্যাপ বিস্তারিত</h1>
+            <div class="header-placeholder"></div>
+        </div>
+    </header>
+
+    <!-- মূল কনটেন্ট -->
+    <main class="main-content">
+        <div class="container">
+            <!-- ব্যানার এড কন্টেইনার -->
+            <div id="bannerAd" class="ad-container banner-ad"></div>
+
+            <!-- অ্যাপ ডিটেইলস সেকশন -->
+            <section class="app-details-section">
+                <div class="app-details-card" id="appDetails">
+                    <!-- অ্যাপ ডিটেইলস ডাইনামিক লোড হবে -->
+                </div>
+            </section>
+
+            <!-- ডাউনলোড সেকশন -->
+            <section class="download-section">
+                <div class="download-card" id="downloadCard">
+                    <!-- ডাউনলোড তথ্য ডাইনামিক লোড হবে -->
+                </div>
+            </section>
+
+            <!-- সোশ্যাল বার এড কন্টেইনার -->
+            <div id="socialBarAd" class="ad-container social-bar-ad"></div>
+        </div>
+    </main>
+
+    <!-- ফুটার -->
+    <footer class="footer">
+        <div class="container">
+            <p>© ২০২৪ প্রিমিয়াম অ্যাপস স্টোর। সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+    <!-- লোডিং ওভারলে -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">লোড হচ্ছে...</p>
+    </div>
+
+    <!-- ইন্টারস্টিশিয়াল এড ওভারলে -->
+    <div id="interstitialOverlay" class="interstitial-overlay">
+        <div class="interstitial-content">
+            <div id="interstitialAd"></div>
+            <button class="close-interstitial" onclick="closeInterstitial()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- স্ক্রিপ্ট -->
+    <script src="main.js" type="module"></script>
+</body>
+</html>
